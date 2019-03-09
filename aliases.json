@@ -1,0 +1,45 @@
+{
+    "Name": "Dome",
+    "Alias": [
+        {
+            "identify": "men",
+            "$young": [
+                "young 1",
+                "young 2"
+            ],
+            "$teen": [
+                "teen 1",
+                "teen 2"
+            ],
+            "$adult": [
+                "adult 1",
+                "adult 2"
+            ],
+            "$old": [
+                "old 1",
+                "old 2",
+                "old 3"
+            ]
+        },
+        {
+            "identify": "female",
+            "$young": [
+                "young 1",
+                "young 2"
+            ],
+            "$teen": [
+                "teen 1",
+                "teen 2"
+            ],
+            "$adult": [
+                "adult 1",
+                "adult 2"
+            ],
+            "$old": [
+                "old 1",
+                "old 2",
+                "old 3"
+            ]
+        }
+    ]
+}
