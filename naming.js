@@ -10,14 +10,12 @@ $(function () {
         var secret = "<option value=" + months[i] + ">" + months[i] + "</option>";
         $('#month').append(secret);
     }
-
 });
 function getCurrentYear() {
     var nowDate = new Date();
     return nowDate.getFullYear();
 }
 $("#play").click(function () {
-
     if ($(this).val() == "Play") {
         $(".inform").toggle("slow");
         $.get("aliases.json", function (data, status) {
@@ -43,40 +41,7 @@ $("#play").click(function () {
         $(".inform").toggle("slow");
         $(this).attr("value", "Play");
     }
-
 });
-
-/* $("#play").click(function () {
-    $(".play").hide();
-    $(".inform").hide("slow");
-    $.get("aliases.json", function (data, status) {
-        if (status = "success") {
-            var sex = $("#sex").val();
-            var year = $("#year").val();
-            var nickname = $("#nickname").val();
-            var age = getAge(year);
-            var type = data.Alias[getSexType(sex)];
-            var alias = getAlias(type, age);
-            //console.log(type.identify+"-"+sex+"-"+age+"-"+year);
-            var tagAlias= '<h2>'+nickname+'</h2>'+'<h2>The</h2>'+'<h2>'+alias+'</h2><br>';
-            $("#result").append(tagAlias);
-        } else {
-            console.log(status);
-        }
-    });
-    $("#result").slideDown();
-    $(".playagain").show("slow");
-    console.log("Random Completed");
-});
-$("#playagain").click(function () {
-    $(".play").show();
-    $(".inform").show("slow");
-    $("#result").empty();
-    $("#result").hide();
-    $(".playagain").hide();
-    $("#header_nickname").val('');
-    console.log("Show Form Completed");
-}); */
 function goRandom(num) {
     return Math.floor(Math.random() * num);
 }
