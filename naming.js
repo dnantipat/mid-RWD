@@ -16,8 +16,37 @@ function getCurrentYear() {
     var nowDate = new Date();
     return nowDate.getFullYear();
 }
-
 $("#play").click(function () {
+
+    if ($(this).val() == "Play") {
+        $(".inform").toggle("slow");
+        $.get("aliases.json", function (data, status) {
+            if (status = "success") {
+                var sex = $("#sex").val();
+                var year = $("#year").val();
+                var nickname = $("#nickname").val();
+                var age = getAge(year);
+                var type = data.Alias[getSexType(sex)];
+                var alias = getAlias(type, age);
+                //console.log(type.identify+"-"+sex+"-"+age+"-"+year);
+                var tagAlias = '<h2>' + nickname + '</h2>' + '<h2>The</h2>' + '<h2>' + alias + '</h2><br>';
+                $("#result").append(tagAlias);
+                $("#result").toggle();
+                $("#result").fadeIn(5000);
+            } else {
+                console.log(status);
+            }
+        });
+        $(this).attr("value", "Play Again");
+    } else {
+        $("#result").empty();
+        $(".inform").toggle("slow");
+        $(this).attr("value", "Play");
+    }
+
+});
+
+/* $("#play").click(function () {
     $(".play").hide();
     $(".inform").hide("slow");
     $.get("aliases.json", function (data, status) {
@@ -47,7 +76,7 @@ $("#playagain").click(function () {
     $(".playagain").hide();
     $("#header_nickname").val('');
     console.log("Show Form Completed");
-});
+}); */
 function goRandom(num) {
     return Math.floor(Math.random() * num);
 }

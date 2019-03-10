@@ -26,12 +26,12 @@
   select{
     width: 20%;
   }
+
 }
 [class*="col-"] {
     float: left;
     padding: 15px;
-    /*border: 1px solid red;*/
-    height: 96px;
+    border: 1px solid red;
 }
 input[type="text"]{
     font-size: 30px;/*200%*/
@@ -39,10 +39,8 @@ input[type="text"]{
 }
 input[type="button"]{
     font-size:35px;
-    width: 100px;
-    height: 100px;
     border: none;
-    border-radius: 50%;
+    border-radius: 10%;
     cursor: pointer;
     box-shadow: 0 8px gray;
     padding: 15px 25px;
@@ -51,6 +49,7 @@ input[type="button"]{
 input[type="button"]:hover{
     background-color:orangered;
     opacity: 1.2;
+    transition: 0.5s;
 }
 input[type="button"]:active {
     background-color: gainsboro;
@@ -58,7 +57,7 @@ input[type="button"]:active {
     transform: translateY(4px);
 }
 select{
-    width: 40%;
+    width: auto;
     font-size: 30px;
 }
 select#sex{
@@ -78,8 +77,6 @@ div{
     display: none;
 }
 #result{
-    display: none;
-    height: auto;
     text-shadow:initial;
     font-size: 28px;
 }
