@@ -23,10 +23,6 @@
   .blank{
       display: none;
   }
-  select{
-    width: 20%;
-  }
-
 }
 [class*="col-"] {
     float: left;

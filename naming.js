@@ -1,4 +1,6 @@
+
 $(function () {
+    /*first value*/
     currentYear = getCurrentYear();
     throughBack = currentYear - 100;
     for (var i = currentYear - 10; i > throughBack; i--) {
@@ -11,11 +13,9 @@ $(function () {
         $('#month').append(secret);
     }
 });
-function getCurrentYear() {
-    var nowDate = new Date();
-    return nowDate.getFullYear();
-}
+
 $("#play").click(function () {
+    /*button play*/
     if ($(this).val() == "Play") {
         $(".inform").toggle("slow");
         $.get("aliases.json", function (data, status) {
@@ -42,6 +42,8 @@ $("#play").click(function () {
         $(this).attr("value", "Play");
     }
 });
+
+/*inuse functions*/
 function goRandom(num) {
     return Math.floor(Math.random() * num);
 }
@@ -69,4 +71,8 @@ function getAlias(sexType, age) {
 }
 function getAge(birthYear) {
     return getCurrentYear() - birthYear;
+}
+function getCurrentYear() {
+    var nowDate = new Date();
+    return nowDate.getFullYear();
 }
