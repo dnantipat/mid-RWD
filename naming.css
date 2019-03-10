@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     text-align: center;
+    font-size: 30px;
 }
 /* For desktop: */
 .col-1 {width: 8.33%;}
@@ -52,27 +53,14 @@ input[type="button"]:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
-select{
-    width: auto;
-    font-size: 30px;
-}
-select#sex{
-    height: 50px;
-}
-select#year{
-    width: 52%;
-}
-span{
-    font-size: 30px;
-    display: block;
-}
 div{
     margin-bottom: 0.5%;
 }
-.playagain{
-    display: none;
+h1{
+    font-size: 35px;
 }
 #result{
-    text-shadow:initial;
-    font-size: 28px;
+    display: none;
+    color:saddlebrown;
+    font-size:38px;
 }

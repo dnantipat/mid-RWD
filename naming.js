@@ -27,9 +27,9 @@ $("#play").click(function () {
                 var type = data.Alias[getSexType(sex)];
                 var alias = getAlias(type, age);
                 //console.log(type.identify+"-"+sex+"-"+age+"-"+year);
-                var tagAlias = '<h2>' + nickname + '</h2>' + '<h2>The</h2>' + '<h2>' + alias + '</h2><br>';
+                var tagAlias = '<br><p>' + nickname + '</p>' + '<h2>The</h2>' + '<p>' + alias + '</p><br>';
                 $("#result").append(tagAlias);
-                $("#result").toggle();
+                
                 $("#result").fadeIn(5000);
             } else {
                 console.log(status);
@@ -37,6 +37,7 @@ $("#play").click(function () {
         });
         $(this).attr("value", "Play Again");
     } else {
+        $("#result").toggle();
         $("#result").empty();
         $(".inform").toggle("slow");
         $(this).attr("value", "Play");
