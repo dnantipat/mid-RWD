@@ -3,84 +3,66 @@
 
 <head>
     <title>ทายฉายา</title>
+    <!--  <link rel="icon" href="img/icon/die.png" sizes="32x32"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Kanit|Montserrat" rel="stylesheet">
+
 </head>
 
 <body>
     <div class="col-12 header">
         <h1>ฉายาของคุณคือ!</h1>
     </div>
-    <div class="inform">
+    <div class="col-3 blank"></div>
+    <div class="inform col-6">
         <div class="col-12">
-            <div class="col-2 blank"></div>
-            <div class="col-8">
-                <div>
-                    <label for="nickname"><span class="nickname">ชื่อเล่น</span></label>
-                </div>
-                <div>
-                    <input type="text" name="nickname" id="nickname">
-                </div>
 
-            </div>
-            <div class="col-2 blank"></div>
+            <label for="nickname"><span class="nickname">ชื่อเล่น</span></label>
+            <input type="text" name="nickname" id="nickname">
         </div>
         <div class="col-12">
-            <div class="col-3 blank"></div>
-            <div class="col-3">
-                <div>
-                    <label for="month">เดือนเกิด</label>
-                </div>
-                <div>
-                    <select name="month" id="month"></select>
-                </div>
+            <div class="plus-margin">
+                <label for="month plus-margin">เดือนเกิด</label>
+                <select name="month" id="month"></select>
             </div>
-            <div class="col-3">
+            <div class="plus-margin">
+                <label for="year">ปีเกิด</label>
+                <select name="year" id="year"></select>
+            </div>
+        </div>
+        <div class="col-12">
+            <label for="sex">เพศ</label>
+            <select name="sex" id="sex">
+                <option value="Men">ชาย</option>
+                <option value="Female">หญิง</option>
+                <option value="none">ไม่ระบุ</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-6" id="result"></div>
 
-                <div>
-                    <label for="year">ปีเกิด</label>
-                </div>
-                <div>
-                    <select name="year" id="year"></select>
-                </div>
-            </div>
-            <div class="col-3 blank"></div>
-        </div>
-        <div class="col-12">
-            <div class="col-2 blank "></div>
-            <div class="col-8">
-                <div>
-                    <label for="sex">เพศ</label>
-                </div>
-                <div>
-                    <select name="sex" id="sex">
-                        <option value="Men">ชาย</option>
-                        <option value="Female">หญิง</option>
-                        <option value="none">ไม่ระบุ</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-2 blank"></div>
-        </div>
+    <div class="play col-12">
+        <input type="button" id="play" value="Play">
     </div>
-    <div class="col-12" id="result"></div>
-    <div class="submit">
-        <div class="play">
-            <div class="col-4 blank"></div>
-            <div class="col-4">
-                <input type="button" id="play" value="Play">
-            </div>
-            <div class="col-4 blank"></div>
-        </div>
-    </div>
-    <!--
-    <div class="footer">
-        <p>Nantipat Suwanvong (Dome)</p>
-    </div>
-    -->
-    <link rel="stylesheet" href="naming.css">
+    <!--   <div class="col-2 beforeft"></div> -->
+    <!--    <div class="footer col-12">
+        <span>
+            Icons made by <a href="https://www.flaticon.com/authors/twitter" title="Twitter">Twitter</a>
+            from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+                target="_blank"> CC 3.0 BY</a>.
+        </span>
+        <span>
+            Looking for code? <a href="https://github.com/dnantipat/mid-RWD">
+                <img src="img/GitHub-Mark/PNG/GitHub-Mark-32px.png" title="dnantipat"></a>
+        </span>
+    </div> -->
+    <link rel="stylesheet" href="css/naming.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="naming.js"></script>
+    <script src="js/naming.js"></script>
+    <!-- <img class="footer" src="https://staging_media.flaticon.com/img/flaticon-logo.svg">
+    <img class="footer" src="https://creativecommons.org/wp-content/themes/cc/images/cc.logo.white.svg"> -->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 </body>
 
