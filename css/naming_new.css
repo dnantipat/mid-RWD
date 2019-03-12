@@ -67,10 +67,11 @@ input[type="button"]:focus{
 select:focus{
     border:2px solid #000;
 }
-select{
+select,option{
     font-size: 28px;
     border:2px solid lightgray;
-    background: orange;
+    color: #333;
+    /* background: orange; */
 }
 .plus-margin{
     margin-bottom: 10px;
