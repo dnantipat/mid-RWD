@@ -33,7 +33,7 @@
 [class*="col-"] {
     float: left;
     padding: 15px;
-    /*border: 1px solid red;*/
+    /* border: 1px solid red; */
 }
 body{
     background :orange;
@@ -45,6 +45,7 @@ input[type="text"]:focus{
 input[type="text"]{
     font-size: 28px;/*200%*/
     width: 200px;
+    border:2px solid lightgray;
     color: #333;
 }
 input[type="button"]{
@@ -52,7 +53,7 @@ input[type="button"]{
     cursor: pointer;
     padding: 0px 45px;
     background: #333;
-    border: none;
+    border: 2px solid #333;
  /*    box-shadow: 0 8px gray;
     
     opacity: 0.9; */
@@ -85,7 +86,7 @@ select:focus{
 }
 select{
     font-size: 28px;
-    border:2px solid white;
+    border:2px solid lightgray;
     background: orange;
 }
 .plus-margin{
@@ -93,6 +94,7 @@ select{
 }
 .inform{
     font-size: 28px;
+    padding: 0%;
 }
 #result{
     display: none;
