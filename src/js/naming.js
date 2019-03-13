@@ -20,28 +20,18 @@ $("#play").click(function(){
                 var age = getAge($("#year").val());
                 var aliases = data.Alias;
                 var alias = aliases[goRandom(aliases.length)];
-                var nickname=$("#nickname").val();
-                nickname=htmlCommentProtection(nickname);
-                console.log(alias);
-                console.log(age);
-                //var fullalias= '<h1>ฉายา</h1>'+alias+'<p>คำอธิบาย : <textarea>coming soon</textarea></p>';
-                //var fullalias= '<h1>ฉายา</h1><h3>'+nickname+'</h3><h2>'+alias+'</h2><p>คำอธิบาย : coming soon</p>';
+                var nickname = antiComment($("#nickname").val());
                 var fullalias= '<h1>ฉายา</h1><h3>'+nickname+'</h3><h2>'+alias+'</h2>';
                 $("#result").append(fullalias);
-                $(".result").toggle();
-                $("#play").toggle();
-                $("#play").attr("value"," Play ");
+                $("#play").toggle().attr("value"," Play ");
                 $("#result").fadeIn(5000,function(){
-                    $("#play").slideDown("slow");
-                    $("#play").attr("value","Play Again");
+                    $("#play").slideDown("slow").attr("value","Play Again");
                 });
             }else
                 console.log(status);
         });
     }else if($(this).val()=='Play Again'){
-        $("#result").empty();
-        $("#result").toggle();
-        $(".result").toggle();
+        $("#result").empty().toggle();
         $(".inform").toggle("slow");
         $("#play").attr("value","Play");
     }
@@ -68,7 +58,7 @@ function getSexType(sex) {
         return goRandom(2);
     }
 }
-function htmlCommentProtection(text){
+function antiComment(text){
     var newVal="";
     for(var i=0;i<text.length;i++){
         /*brutal statement*/
