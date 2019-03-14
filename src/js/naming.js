@@ -15,7 +15,7 @@ $(function () {
 $("#play").click(function () {
     /*brutal statement*/
     if ($("#nickname").val().length > 15 || $("#nickname").val() == "" || $("#nickname").val() == " ") {
-        alert("ชื่อเล่น");
+        alert("กรุณากรอกชื่อเล่นครับ!");
         $("#nickname").val("");
     }
     if ($(this).val() == 'Play' && $("#nickname").val().length < 16 && $("#nickname").val() != "" && $("#nickname").val() != " ") {
