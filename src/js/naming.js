@@ -14,7 +14,11 @@ $(function () {
 });
 $("#play").click(function () {
     /*brutal statement*/
-    if ($(this).val() == 'Play') {
+    if($("#nickname").val().length>15||$("#nickname").val()==""||$("#nickname").val()==" "){
+        alert("ชื่อเล่น");
+        $("#nickname").val("");
+    }
+    if ($(this).val() == 'Play'&&$("#nickname").val().length<16&&$("#nickname").val()!=""&&$("#nickname").val()!=" ") {
         $("#play").slideUp(100, function () {
             $.get("json/alias.json", function (data, status) {
                 if (status == 'success') {
