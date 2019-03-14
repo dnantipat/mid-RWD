@@ -14,11 +14,11 @@ $(function () {
 });
 $("#play").click(function () {
     /*brutal statement*/
-    if($("#nickname").val().length>15||$("#nickname").val()==""||$("#nickname").val()==" "){
+    if ($("#nickname").val().length > 15 || $("#nickname").val() == "" || $("#nickname").val() == " ") {
         alert("ชื่อเล่น");
         $("#nickname").val("");
     }
-    if ($(this).val() == 'Play'&&$("#nickname").val().length<16&&$("#nickname").val()!=""&&$("#nickname").val()!=" ") {
+    if ($(this).val() == 'Play' && $("#nickname").val().length < 16 && $("#nickname").val() != "" && $("#nickname").val() != " ") {
         $("#play").slideUp(100, function () {
             $.get("json/alias.json", function (data, status) {
                 if (status == 'success') {
@@ -26,7 +26,7 @@ $("#play").click(function () {
                     var aliases = data.AliasDesVer;
                     var alias = aliases[goRandom(aliases.length)];
                     var nickname = antiComment($("#nickname").val());
-                    var fullalias = '<h1>ฉายา</h1><h3>' + nickname + '</h3><h2>' + alias.title + '</h2><p>'+alias.description+'</p>';
+                    var fullalias = '<h1>ฉายา</h1><h3>' + nickname + '</h3><h2>' + alias.title + '</h2><p>' + alias.description + '</p>';
                     $("#result").append(fullalias);
                     $("#play").attr("value", " Play ");
                     $("#result").fadeIn(3200, function () {
@@ -35,26 +35,7 @@ $("#play").click(function () {
                 } else
                     console.log(status);
             });
-            // $.get("json/alias.json", function (data, status) {
-            //     if (status == 'success') {
-            //         $(".inform").toggle("slow");
-            //         //var age = getAge($("#year").val());
-            //         var aliases = data.Alias;
-            //         var alias = aliases[goRandom(aliases.length)];
-            //         var nickname = antiComment($("#nickname").val());
-            //         var fullalias = '<h1>ฉายา</h1><h3>' + nickname + '</h3><h2>' + alias + '</h2>';
-            //         $("#result").append(fullalias);
-            //         $("#play").attr("value", " Play ");
-            //         $("#result").fadeIn(5000, function () {
-            //             $("#play").slideDown("slow").attr("value", "Play Again");/*brutal statement in this line*/
-            //         });
-            //     } else
-            //         console.log(status);
-            // });
-        }
-
-        );
-
+        });
     } else if ($(this).val() == 'Play Again') {
         $("#result").empty().toggle();
         $(".inform").toggle("slow");
@@ -64,6 +45,10 @@ $("#play").click(function () {
 /*inuse functions*/
 function goRandom(num) {
     return Math.floor(Math.random() * num);
+}
+function getCurrentYear() {
+    var nowDate = new Date();
+    return nowDate.getFullYear();
 }
 function antiComment(text) {
     var newVal = "";
@@ -76,23 +61,4 @@ function antiComment(text) {
         }
     }
     return newVal;
-}
-/*nope*/
-function getAge(birthYear) {
-    return getCurrentYear() - birthYear;
-}
-function getCurrentYear() {
-    var nowDate = new Date();
-    return nowDate.getFullYear();
-}
-function getSexType(sex) {
-    if (sex == "Men") {
-        return 0;
-    }
-    else if (sex == "Female") {
-        return 1;
-    }
-    else {
-        return goRandom(2);
-    }
 }

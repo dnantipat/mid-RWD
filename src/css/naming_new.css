@@ -1,9 +1,7 @@
 * {
     box-sizing: border-box;
     text-align: center;
-    color: white;
     font-family: 'Kanit', sans-serif;
-    
 }
 /* For desktop: */
 .col-1 {width: 8.33%;}
@@ -18,7 +16,7 @@
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 880px) {
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
@@ -36,62 +34,53 @@
     /*  border: 1px solid red;  */
 }
 body{
-    background :orange;
+    color: #333;
+    background-color: antiquewhite;
 }
 input[type="text"]:focus{
-    border:2px solid #333;
-    
+    border:3px solid #333;
 }
 input[type="button"]{
     font-size:28px;
     cursor: pointer;
     padding: 0px 45px;
     background: #333;
-    border: 2px solid #333;
+    border: 3px solid #333;
+    color: white;
 }
-input[type="button"]:focus{
-    border:2px solid white;
+input[type="button"]:hover{
+    color: #333;
+    background-color: salmon;
+    border:3px solid salmon;
 }
 select:focus{
-    border:2px solid #000;
+    border:3px solid #333;
 }
 select,option,input[type="text"]{
     width: 100%;
     font-size: 28px;
-    border:2px solid lightgray;
+    background-color: seashell;
+    border:3px solid lightgray;
     color: #333;
 }
 .inform{
     font-size: 28px;
-    padding: 0%;
 }
 #result{
     display: none;
-    color:wheat;
-    font-size:28px;
-    /* word-break: break-all; */
-    background: chocolate;
+    font-size:25px;
+    color:#333;
+    background: salmon;
     padding: 12px;
-}
-.result{
-    background: brown;
-    display: none;
-    
 }
 a:link {
     text-decoration: none;
-    
 }
 a:visited {
     text-decoration: none;
     color: #000;
 }
-  
-a:hover {
-    text-decoration: underline;
-}
-  
-a:active {
+a:hover,a:active{
     text-decoration: underline;
 }
 .play{
