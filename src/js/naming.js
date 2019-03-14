@@ -19,11 +19,10 @@ $("#play").click(function () {
             $.get("json/alias.json", function (data, status) {
                 if (status == 'success') {
                     $(".inform").toggle("slow");
-                    //var age = getAge($("#year").val());
-                    var aliases = data.Alias;
+                    var aliases = data.AliasDesVer;
                     var alias = aliases[goRandom(aliases.length)];
                     var nickname = antiComment($("#nickname").val());
-                    var fullalias = '<h1>ฉายา</h1><h3>' + nickname + '</h3><h2>' + alias + '</h2>';
+                    var fullalias = '<h1>ฉายา</h1><h3>' + nickname + '</h3><h2>' + alias.title + '</h2><p>'+alias.description+'</p>';
                     $("#result").append(fullalias);
                     $("#play").attr("value", " Play ");
                     $("#result").fadeIn(5000, function () {
@@ -32,6 +31,22 @@ $("#play").click(function () {
                 } else
                     console.log(status);
             });
+            // $.get("json/alias.json", function (data, status) {
+            //     if (status == 'success') {
+            //         $(".inform").toggle("slow");
+            //         //var age = getAge($("#year").val());
+            //         var aliases = data.Alias;
+            //         var alias = aliases[goRandom(aliases.length)];
+            //         var nickname = antiComment($("#nickname").val());
+            //         var fullalias = '<h1>ฉายา</h1><h3>' + nickname + '</h3><h2>' + alias + '</h2>';
+            //         $("#result").append(fullalias);
+            //         $("#play").attr("value", " Play ");
+            //         $("#result").fadeIn(5000, function () {
+            //             $("#play").slideDown("slow").attr("value", "Play Again");/*brutal statement in this line*/
+            //         });
+            //     } else
+            //         console.log(status);
+            // });
         }
 
         );
