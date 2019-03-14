@@ -29,7 +29,7 @@ $("#play").click(function () {
                     var fullalias = '<h1>ฉายา</h1><h3>' + nickname + '</h3><h2>' + alias.title + '</h2><p>'+alias.description+'</p>';
                     $("#result").append(fullalias);
                     $("#play").attr("value", " Play ");
-                    $("#result").fadeIn(5000, function () {
+                    $("#result").fadeIn(3200, function () {
                         $("#play").slideDown("slow").attr("value", "Play Again");/*brutal statement in this line*/
                     });
                 } else
